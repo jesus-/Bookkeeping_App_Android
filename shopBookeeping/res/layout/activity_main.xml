@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  
+    >
+    <CalendarView
+        android:id="@+id/cv_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"         
+        /> 
+	<RelativeLayout 
+	android:id="@+id/rl_day_date"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:layout_below="@+id/cv_calendar"
+     >      
+	     <TextView android:id="@+id/day_date"
+   			 style="@style/informationTag"
+       		 android:text="Payments"
+     		/>     
+		 <Button
+		     android:id="@+id/b_add_day"
+		     style="@style/button_add_style"
+		     android:layout_width="wrap_content"
+		     android:layout_alignParentRight="true"
+		     android:adjustViewBounds="true"
+		     android:onClick="onClickAddDay"
+		     android:text="+" />
+		 
+      </RelativeLayout>          
+ 
+   <RelativeLayout
+	android:id="@+id/rl_sale"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal" 
+    android:layout_below="@+id/rl_day_date"   
+        
+    >      
+      <TextView
+       android:id="@+id/tv_sale"
+       style="@style/custom_form"
+       
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Sale: "
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+      />
+       <TextView
+       android:id="@+id/tv_sale_day"
+       android:layout_toRightOf="@+id/tv_sale" 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       
+      />
+    </RelativeLayout>    
+    <RelativeLayout
+	android:id="@+id/rl_cash"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"    
+    android:layout_below="@+id/rl_sale"   
+     
+    >      
+      <TextView
+       android:id="@+id/tv_cash"
+       style="@style/custom_form"
+       
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Cash: "
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+      />
+       <TextView
+       android:id="@+id/tv_cash_day"
+       android:layout_toRightOf="@+id/tv_cash" 
+                  
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+      />
+    </RelativeLayout>     
+    <RelativeLayout
+	android:id="@+id/rl_change"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"  
+    android:layout_below="@+id/rl_cash"   
+       
+    >      
+      <TextView
+       android:id="@+id/tv_change"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       style="@style/custom_form"      
+       android:text="Change: "
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+      />
+       <TextView
+       android:id="@+id/tv_change_day"
+       android:layout_toRightOf="@+id/tv_change" 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+      />
+    </RelativeLayout> 
+     <RelativeLayout
+	android:id="@+id/rl_go_day"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"  
+    android:layout_below="@+id/rl_change"   
+       android:gravity="center"   
+       
+    >         
+    <Button
+       android:id="@+id/b_go_day"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:onClick="onClickGoDay"
+       android:text="Go to day" 
+       android:gravity="center"   
+       />   
+</RelativeLayout>       
+
+</RelativeLayout>

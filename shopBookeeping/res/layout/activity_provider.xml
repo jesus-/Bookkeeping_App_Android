@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shopbookeeping.ProviderActivity"
+    tools:ignore="MergeRootFrame" 
+    android:orientation="vertical"     
+    
+    >
+
+<RelativeLayout 
+	android:id="@+id/rl_head_provider"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+     >      
+	     <TextView android:id="@+id/tv_head_provider"
+   		style="@style/informationTag"
+       		 android:text="Providers"
+     		/>     
+		 <Button
+		     android:id="@+id/b_add_new_provider"
+		     style="@style/button_add_style"
+		     android:layout_width="wrap_content"
+		     android:layout_alignParentRight="true"
+		     android:adjustViewBounds="true"
+		     android:onClick="onBtnClickedSaveProvider"
+		     android:text="+" />
+		 
+      </RelativeLayout>   
+     <TextView
+         style="@style/column_lv_element"
+        android:id="@+id/first_column1"
+	    android:layout_width="90dp"
+	    android:text="Name"
+	    android:layout_below="@+id/rl_head_provider"      
+	    
+         />        
+    
+    <ListView
+        android:layout_below="@+id/first_column1"      
+        android:id="@+id/lv_providers"
+        android:layout_width="match_parent"
+        android:layout_height="365dp" 
+		android:layout_alignParentBottom="true"    
+        
+        >
+    </ListView>
+<!--      <Button
+	      android:id="@+id/b_add_new_provider"
+	      android:layout_below="@+id/lv_providers"      
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:onClick="onBtnClickedSaveProvider"
+	      android:text="Add Provider" 
+		  android:layout_alignParentRight="true"
+ 		  android:layout_marginLeft="10dp"
+ 		  android:layout_marginRight="10dp" ></Button> -->
+</RelativeLayout>

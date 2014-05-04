@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shopbookeeping.NameExpensesActivity"
+    tools:ignore="MergeRootFrame" 
+    android:orientation="vertical"    
+    >
+    <RelativeLayout 
+		android:id="@+id/rl_head_expenses"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/tv_amount_payments"
+	    android:background="@drawable/list_selector"
+     >  
+    <TextView android:id="@+id/tv_head_expenses"
+   		style="@style/informationTag"
+        android:text="Name expenses"      
+         />   
+ 	</RelativeLayout>        
+		 <include layout="@layout/columns_expense"/>
+            
+  <ListView
+        android:id="@+id/lv_expense_by_name"
+        android:layout_below="@+id/rl_header_expenses"      
+        android:layout_height="match_parent"
+        
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"    
+	 >
+    </ListView>
+    
+  </RelativeLayout>

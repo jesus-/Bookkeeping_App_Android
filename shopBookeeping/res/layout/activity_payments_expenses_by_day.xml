@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shopbookeeping.ProviderActivity"
+    tools:ignore="MergeRootFrame" 
+    android:orientation="vertical"    
+    >
+<RelativeLayout 
+	android:id="@+id/rl_head_payments"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+     >      
+	     <TextView android:id="@+id/tv_head_payment"
+   			 style="@style/informationTag"
+       		 android:text="Payments"
+     		/>     
+		 <Button
+		     android:id="@+id/b_add_payment"
+		     style="@style/button_add_style"
+		     android:layout_width="wrap_content"
+		     android:layout_alignParentRight="true"
+		     android:adjustViewBounds="true"
+		     android:onClick="onClickAddPayment"
+		     android:text="+" />
+		 
+      </RelativeLayout>  
+        
+		 <include layout="@layout/columns_payment"/>
+
+ 	 <ListView
+        android:id="@+id/lv_payments_by_day"
+        android:layout_below="@+id/rl_header_payment"        
+        android:layout_width="match_parent"
+        android:layout_height="190dp" >
+    </ListView>
+    <TextView android:id="@+id/tv_amount_payments"
+   		style="@style/amountTag"
+		android:layout_width="match_parent"
+		android:layout_below="@+id/lv_payments_by_day"
+		    
+         />  
+<RelativeLayout 
+	android:id="@+id/rl_head_expenses"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_amount_payments"
+    android:background="@drawable/list_selector"
+     >      
+	     <TextView android:id="@+id/tv_head_expenses"
+	        style="@style/informationTag"
+	        android:text="Expenses"
+	        android:layout_weight="9"
+	        
+		/>   
+		 <Button
+		     android:id="@+id/b_add_expense"
+		     style="@style/button_add_style"
+		     android:layout_width="wrap_content"
+		     android:layout_alignParentRight="true"
+		     android:adjustViewBounds="true"
+		     android:onClick="onClickAddExpense"
+		     android:text="+" />
+		 
+      </RelativeLayout>
+		 <include layout="@layout/columns_expense"/>
+  <ListView
+      	android:layout_below="@+id/rl_header_expenses"
+      	android:layout_above="@+id/tv_amount_expenses"
+        android:id="@+id/lv_expenses_by_day"
+        android:layout_width="match_parent"
+        android:layout_height="90dp" >
+    </ListView>
+    <TextView android:id="@+id/tv_amount_expenses"
+   		style="@style/amountTag"
+		android:layout_alignParentBottom="true"    
+		android:layout_width="match_parent"
+		    
+         />  
+
+  </RelativeLayout>

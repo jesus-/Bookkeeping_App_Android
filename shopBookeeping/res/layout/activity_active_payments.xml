@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shopbookeeping.ProviderActivity"
+    tools:ignore="MergeRootFrame" 
+    android:orientation="vertical"    
+    >
+	<RelativeLayout 
+	android:id="@+id/rl_head_payments"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+     >  
+    <TextView
+        android:id="@+id/tv_head_payments"
+        style="@style/informationTag"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:text="Active payments" />
+	</RelativeLayout>    
+	 <include layout="@layout/columns_payment"/>
+    
+    
+    <TextView android:id="@+id/tv_amount"
+   		style="@style/amountTag"
+		android:layout_alignParentBottom="true"    
+		android:layout_width="match_parent"
+		    
+         />  
+         
+     <ListView
+       android:layout_below="@+id/rl_header_payment" 
+       android:layout_above="@+id/tv_amount"
+        android:id="@+id/lv_active_payments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+         >
+    </ListView>  
+  </RelativeLayout>
+  

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+    <RelativeLayout
+	android:id="@+id/rl_provider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"     
+    >  
+      <TextView
+       android:id="@+id/tv_expense"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Expense"
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+  	   style="@style/custom_form"
+
+      />
+
+
+     <Spinner
+         android:id="@+id/s_expenses"
+         android:layout_toRightOf="@+id/tv_expense"       
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:background="@drawable/edittext_rounded_corners"
+         
+ 		 />
+
+    </RelativeLayout>	    
+    <RelativeLayout
+	android:id="@+id/rl_amount"
+	android:layout_below="@+id/rl_provider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"     
+    >  
+      <TextView
+       android:id="@+id/tv_amount"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Amount"
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+  	   style="@style/custom_form"
+      />
+       <EditText
+       android:id="@+id/et_amount"
+       android:layout_toRightOf="@+id/tv_amount" 
+		android:inputType="numberDecimal"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+  	   style="@style/custom_form"
+  	   android:background="@drawable/edittext_rounded_corners"
+  	   
+      />
+	</RelativeLayout>	
+
+    
+	      
+    <RelativeLayout
+	android:id="@+id/rl_buttons"
+	android:layout_below="@+id/rl_amount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+        android:gravity="center"
+        
+    >         
+       <Button           
+       android:id="@+id/b_cancel_expense"
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Cancel" 
+       />    
+       <Button           
+       android:id="@+id/b_save_expense"
+ 	   android:layout_toRightOf="@+id/b_cancel_expense" 
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Save" 
+       />  
+    </RelativeLayout>	 
+       
+       
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+     <TextView
+	     android:id="@+id/tv_head_working_day"
+	     style="@style/informationTag"
+	     android:layout_width="match_parent"
+	     android:layout_alignParentTop="true"
+	     android:text="Add payment" />
+     
+    <RelativeLayout
+	android:id="@+id/rl_sale"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"  
+    android:layout_below="@+id/tv_head_working_day"   
+    >  
+     
+
+      <TextView
+       android:id="@+id/tv_sale"
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Sale: "
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       style="@style/custom_form"
+ 
+      />
+       <EditText
+       android:id="@+id/et_sale"
+       android:layout_toRightOf="@+id/tv_sale" 
+		android:inputType="numberDecimal"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       android:background="@drawable/edittext_rounded_corners"
+       style="@style/custom_form"
+        
+      />
+	</RelativeLayout>	
+
+     <RelativeLayout
+	android:id="@+id/rl_cash"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"  
+    android:layout_below="@+id/rl_sale"   
+    >  
+     
+
+      <TextView
+       android:id="@+id/tv_cash"
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Cash: "
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       style="@style/custom_form"
+ 
+      />
+       <EditText
+       android:id="@+id/et_cash"
+       android:layout_toRightOf="@+id/tv_cash" 
+		android:inputType="numberDecimal"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       android:background="@drawable/edittext_rounded_corners"
+       style="@style/custom_form"
+        
+      />
+	</RelativeLayout>	  
+    <RelativeLayout
+	android:id="@+id/rl_change"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"  
+    android:layout_below="@+id/rl_cash"   
+    >  
+     
+
+      <TextView
+       android:id="@+id/tv_change"
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Change: "
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       style="@style/custom_form"
+ 
+      />
+       <EditText
+       android:id="@+id/et_change"
+       android:layout_toRightOf="@+id/tv_change" 
+		android:inputType="numberDecimal"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       android:background="@drawable/edittext_rounded_corners"
+       style="@style/custom_form"
+        
+      />
+	</RelativeLayout>		      
+    <RelativeLayout
+	android:id="@+id/rl_buttons"
+	android:layout_below="@+id/rl_change"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"     
+    android:gravity="center"
+    >         
+       <Button           
+       android:id="@+id/b_cancel_working_day"
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Cancel" 
+       />    
+       <Button           
+       android:id="@+id/b_save_working_day"
+ 	   android:layout_toRightOf="@+id/b_cancel_working_day" 
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Save" 
+       />  
+    </RelativeLayout>	 
+       
+       
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shopbookeeping.ProviderActivity"
+    tools:ignore="MergeRootFrame" 
+    android:orientation="vertical"    
+    >
+    <RelativeLayout 
+	android:id="@+id/rl_head_payments"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+     >   
+     <TextView android:id="@+id/tv_head_payment"
+   		style="@style/informationTag"
+        android:text="Payments by provider"
+     />    
+     </RelativeLayout>  
+ 	<include layout="@layout/columns_payment"/>
+
+  <ListView
+        android:id="@+id/payment_by_provider"
+        android:layout_below="@+id/rl_header_payment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+ 		android:layout_alignParentBottom="true"    
+         >
+    </ListView>
+    
+  </RelativeLayout>

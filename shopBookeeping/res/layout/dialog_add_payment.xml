@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+        <TextView
+        android:id="@+id/tv_head_payments"
+        style="@style/informationTag"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:text="Add payment" />
+    <RelativeLayout
+	android:id="@+id/rl_provider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"  
+    android:layout_below="@+id/tv_head_payments"   
+    >  
+      <TextView
+       android:id="@+id/tv_provider"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Provider"
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+  	   style="@style/custom_form"
+
+      />
+
+
+     <Spinner
+         android:id="@+id/s_providers"
+         android:layout_toRightOf="@+id/tv_provider"       
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:background="@drawable/edittext_rounded_corners"
+
+ 		 />
+
+    </RelativeLayout>	    
+    <RelativeLayout
+	android:id="@+id/rl_amount"
+	android:layout_below="@+id/rl_provider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"     
+    >  
+      <TextView
+       android:id="@+id/tv_amount"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Amount"
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       style="@style/custom_form"
+ 
+      />
+       <EditText
+       android:id="@+id/et_amount"
+       android:layout_toRightOf="@+id/tv_amount" 
+		android:inputType="numberDecimal"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       android:background="@drawable/edittext_rounded_corners"
+       style="@style/custom_form"
+        
+      />
+	</RelativeLayout>	
+
+     <RelativeLayout
+         android:id="@+id/rl_state"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/rl_amount"
+         android:orientation="horizontal" >
+
+         <CheckBox
+             android:id="@+id/cb_paid"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:layout_marginLeft="22dp"
+             android:text="UnPaid" />
+
+     </RelativeLayout>
+	      
+    <RelativeLayout
+	android:id="@+id/rl_buttons"
+	android:layout_below="@+id/rl_state"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"     
+    android:gravity="center"
+    >         
+       <Button           
+       android:id="@+id/b_cancel_payment"
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Cancel" 
+       />    
+       <Button           
+       android:id="@+id/b_save_payment"
+ 	   android:layout_toRightOf="@+id/b_cancel_payment" 
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:text="Save" 
+       />  
+    </RelativeLayout>	 
+       
+       
+</RelativeLayout>

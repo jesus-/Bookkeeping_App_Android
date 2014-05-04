@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:padding="6dip" 
+    android:weightSum="12"
+    android:background="@drawable/list_selector"
+    >
+
+    <TextView
+         style="@style/row_lv_element"
+        android:id="@+id/first_column"
+	    android:layout_width="90dp"
+         />
+
+    <TextView
+		style="@style/row_lv_element"
+        android:id="@+id/second_column"
+	    android:layout_width="180dp"
+		android:layout_toRightOf="@+id/first_column"
+        />
+
+    <TextView
+        style="@style/row_lv_element"
+		android:id="@+id/third_column"  
+		android:layout_toRightOf="@+id/second_column"
+		android:layout_width="70dp"
+  	 />
+
+</RelativeLayout> 

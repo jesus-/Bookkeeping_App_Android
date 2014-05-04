@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">shopBookeeping</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="expenses">Expenses</string>
+    <string name="providers">Providers</string>
+    <string name="title_activity_provider">ProviderActivity</string>
+    <string name="title_activity_name__expenses">Name_ExpensesActivity</string>
+    <string name="title_activity_active_payments">ActivePaymentsActivity</string>
+    <string name="title_activity_payment_by_provider">PaymentByProviderActivity</string>
+    <string name="title_activity_show_payment">ShowPaymentActivity</string>
+    <string name="title_activity_show_expense">ShowExpenseActivity</string>
+    <string name="title_activity_expense_by_name">ExpenseByName</string>
+    <string name="title_activity_payments_expenses_by_day">PaymentsExpensesByDayActivity</string>
+
+</resources>

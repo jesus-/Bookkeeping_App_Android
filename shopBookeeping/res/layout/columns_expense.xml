@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rl_header_expenses"
+    android:layout_width="fill_parent"
+    android:layout_height="26dp"
+    android:layout_below="@+id/rl_head_expenses"
+    android:background="@drawable/list_selector"
+     >
+
+    <TextView
+         style="@style/column_lv_element"
+        android:id="@+id/first_column1"
+	    android:layout_width="90dp"
+	    android:text="Date"
+         />
+
+    <TextView
+		style="@style/column_lv_element"
+        android:id="@+id/second_column1"
+	    android:layout_width="180dp"
+		android:layout_toRightOf="@+id/first_column1"
+		android:text="Provider"
+		
+        />
+
+    <TextView
+        style="@style/column_lv_element"
+		android:id="@+id/third_column1"  
+		android:layout_toRightOf="@+id/second_column1"
+		android:layout_width="70dp"
+		android:text="Amount"
+		
+  	 />
+
+</RelativeLayout>   

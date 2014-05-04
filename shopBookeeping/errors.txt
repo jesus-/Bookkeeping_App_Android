@@ -1,0 +1,5 @@
+cambiar cabeceras.
+arreglar barra de estado
+user and password
+
+settings??
