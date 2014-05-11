@@ -28,14 +28,13 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.os.Build;
 
-public class ExpenseByNameActivity extends ActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener {
+public class ExpenseByNameActivity extends CustomActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener {
 
 
 	ConnectionAPI connectionAPI;
 	List <ExpenseRow> expenses;
 	ListView lv_expense_by_name;
-	String user;
-	String password;	
+
 	String name_expense;
 	ExpenseArrayAdapter adapter;
 	int idToDelete = 0;

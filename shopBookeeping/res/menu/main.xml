@@ -21,7 +21,7 @@
      <item
         android:id="@+id/action_active_payments"
         android:orderInCategory="100"
-        android:title="actives"
+        android:title="Active payments"
         app:showAsAction="never"/>
 
 </menu>

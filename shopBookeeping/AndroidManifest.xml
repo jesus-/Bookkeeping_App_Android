@@ -15,12 +15,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/book_blue"
+        android:label=" Bookkeeping "
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.shopbookeeping.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.example.shopbookeeping.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,38 +27,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.shopbookeeping.ProviderActivity"
-            android:label="@string/title_activity_provider" >
+            android:name="com.example.shopbookeeping.ProviderActivity" >
         </activity>
         <activity
-            android:name="com.example.shopbookeeping.NameExpensesActivity"
-            android:label="@string/title_activity_name__expenses" >
+            android:name="com.example.shopbookeeping.NameExpensesActivity" >
         </activity>
         <activity
-            android:name="com.example.shopbookeeping.ActivePaymentsActivity"
-            android:label="@string/title_activity_active_payments" >
+            android:name="com.example.shopbookeeping.ActivePaymentsActivity">
         </activity>
         <activity
-            android:name="com.example.shopbookeeping.PaymentByProviderActivity"
-            android:label="@string/title_activity_payment_by_provider" >
+            android:name="com.example.shopbookeeping.PaymentByProviderActivity">
         </activity>
         <activity
             android:name="com.example.shopbookeeping.ShowPaymentActivity"
-			android:theme="@style/CustomDialog"
-            android:label="@string/title_activity_show_payment" >
+            android:theme="@style/CustomDialog" >
         </activity>
         <activity
             android:name="com.example.shopbookeeping.ShowExpenseActivity"
-            android:theme="@style/CustomDialog" 
-            android:label="@string/title_activity_show_expense" >
+            android:theme="@style/CustomDialog" >
         </activity>
         <activity
-            android:name="com.example.shopbookeeping.ExpenseByNameActivity"
-            android:label="@string/title_activity_expense_by_name" >
+            android:name="com.example.shopbookeeping.ExpenseByNameActivity" >
         </activity>
         <activity
-            android:name="com.example.shopbookeeping.PaymentsExpensesByDayActivity"
-            android:label="@string/title_activity_payments_expenses_by_day" >
+            android:name="com.example.shopbookeeping.PaymentsExpensesByDayActivity" >
+        </activity>
+        <activity
+            android:name="com.example.shopbookeeping.SettingsActivity" >
         </activity>
     </application>
 

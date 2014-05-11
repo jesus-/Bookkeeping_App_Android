@@ -33,14 +33,12 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.os.Build;
 
-public class NameExpensesActivity extends ActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener,OnItemLongClickListener,DialogInterface.OnClickListener {
+public class NameExpensesActivity extends CustomActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener,OnItemLongClickListener,DialogInterface.OnClickListener {
 
 
 	ConnectionAPI connectionAPI;
 	int[] intID=null; // Array with the ID showed in the listview
 	ArrayList <String> stringName;//Array with the name showed in the listview
-	String user;
-	String password;
 	int idToDelete = 0;
 	ListView lv_expenses;
 	ArrayAdapter<String> adapter;
@@ -211,5 +209,9 @@ public class NameExpensesActivity extends ActionBarActivity implements AsyncTask
 				alertDialog.show();
 			return false;		
 	}
-			 
+	public void onBackPressed() {
+		 Intent next_screen = new Intent(this,MainActivity.class);
+        next_screen.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        this.startActivity(next_screen);	
+	}			 
 }

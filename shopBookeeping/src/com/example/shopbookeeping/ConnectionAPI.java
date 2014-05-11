@@ -29,8 +29,8 @@ import android.os.AsyncTask;
 public class ConnectionAPI extends AsyncTask<ActionConnection,Void,ActionConnection>{
     private AsyncTaskCompleteListener<ActionConnection> callback;
 	final static String URLServer ="http://boiling-fortress-1506.herokuapp.com/"; 
-	// final static String URLServer ="http://localhost:8080"; 
-	 
+	//final static String URLServer ="http://localhost:8080"; 
+//	final static  String URLServer ="http://192.168.1.93:3000"; 
 	 ActionConnection information = null;
 	 ArrayList<HttpURLConnection> connection = null;
      OutputStreamWriter wr = null;

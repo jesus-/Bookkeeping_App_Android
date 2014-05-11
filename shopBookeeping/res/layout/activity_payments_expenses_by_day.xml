@@ -43,10 +43,18 @@
 		    
          />  
 <RelativeLayout 
+	android:id="@+id/white_line"
+    android:layout_width="fill_parent"
+    android:layout_height="5dp"
+    android:layout_below="@+id/tv_amount_payments"
+    android:background="@drawable/list_selector"
+     >           
+</RelativeLayout>    
+<RelativeLayout 
 	android:id="@+id/rl_head_expenses"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@+id/tv_amount_payments"
+    android:layout_below="@+id/white_line"
     android:background="@drawable/list_selector"
      >      
 	     <TextView android:id="@+id/tv_head_expenses"

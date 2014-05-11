@@ -30,13 +30,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class ProviderActivity extends ActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>,OnItemLongClickListener, OnItemClickListener,OnClickListener, DialogInterface.OnClickListener{
+public class ProviderActivity extends CustomActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>,OnItemLongClickListener, OnItemClickListener,OnClickListener, DialogInterface.OnClickListener{
 
 	ConnectionAPI connectionAPI;
 	int[] intID=null; // Array with the ID showed in the listview
-	ArrayList<String> stringName;//List with the name showed in the listview
-	String user;
-	String password;	
+	ArrayList<String> stringName;//List with the name showed in the listview	
 	int idToDelete = 0;
 	EditText name;
 	Dialog dialog;
@@ -196,7 +194,11 @@ public class ProviderActivity extends ActionBarActivity implements AsyncTaskComp
 		
 	}
 
-			 
+	public void onBackPressed() {
+		 Intent next_screen = new Intent(this,MainActivity.class);
+        next_screen.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        this.startActivity(next_screen);	
+	}			 
 		
 }
 

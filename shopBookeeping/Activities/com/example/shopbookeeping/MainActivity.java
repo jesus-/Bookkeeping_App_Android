@@ -19,8 +19,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -40,10 +42,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Build;
 
-public class MainActivity extends ActionBarActivity implements OnDateChangeListener,AsyncTaskCompleteListener<ActionConnection>,OnClickListener{
+public class MainActivity extends CustomActionBarActivity implements OnDateChangeListener,AsyncTaskCompleteListener<ActionConnection>,OnClickListener{
 	
-	String user = "prueba";
-	String password = "prueba";
+
 	CalendarView cv_calendar;
 	SimpleDateFormat dateformat;
 	WorkingDayRow workingDay;
@@ -73,10 +74,13 @@ public class MainActivity extends ActionBarActivity implements OnDateChangeListe
 	    cv_calendar.setDate(now.getTime());
 	    
 		tv_date.setText("Day: "+dateformat.format(new Date(date_selected)));
-
+		final SharedPreferences prefs = getSharedPreferences("Preferences",Context.MODE_PRIVATE);
+		user = prefs.getString("User", null);	
+		password = prefs.getString("Password",null);
 		requestWorkingDay(date_selected);
 		 Locale locale = new Locale("es","ES");
 		 currencyFormat = NumberFormat.getCurrencyInstance(locale);
+		 
 
 
 
@@ -148,44 +152,7 @@ public class MainActivity extends ActionBarActivity implements OnDateChangeListe
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		Intent nextScreen;
-	    switch (item.getItemId()) {
-	    
-	    case R.id.action_providers:	    	
-			  nextScreen = new Intent(getApplicationContext(), ProviderActivity.class);
-			 System.out.println("setting params");
- 	         nextScreen.putExtra("user", user);
- 	         nextScreen.putExtra("password", password);
-	         startActivity(nextScreen);	
-	    	break;
-	    case R.id.action_expenses: 	
-			  nextScreen = new Intent(getApplicationContext(), NameExpensesActivity.class);
-			 System.out.println("setting params");
- 	         nextScreen.putExtra("user", user);
- 	         nextScreen.putExtra("password", password);
-	         startActivity(nextScreen);		    	
-	    	
-	    	break;
-	    case R.id.action_active_payments: 	
-			  nextScreen = new Intent(getApplicationContext(), ActivePaymentsActivity.class);
-			 System.out.println("setting params");
- 	         nextScreen.putExtra("user", user);
- 	         nextScreen.putExtra("password", password);
-	         startActivity(nextScreen);		    	
-	    	
-	    	break;
-	    default:
-	    	break;
-	    	
-	    }
 
-		return true;
-	}
 
 	/**
 	 * A placeholder fragment containing a simple view.
@@ -227,6 +194,9 @@ public class MainActivity extends ActionBarActivity implements OnDateChangeListe
 	protected void onResume() {
 	    super.onResume();
 	    ViewServer.get(this).setFocusedWindow(this);
+		final SharedPreferences prefs = getSharedPreferences("Preferences",Context.MODE_PRIVATE);
+		user = prefs.getString("User", null);	
+		password = prefs.getString("Password",null);
 
 	}
 

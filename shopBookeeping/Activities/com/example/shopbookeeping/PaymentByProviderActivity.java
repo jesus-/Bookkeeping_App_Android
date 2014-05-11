@@ -31,13 +31,11 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.os.Build;
 
-public class PaymentByProviderActivity extends ActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener {
+public class PaymentByProviderActivity extends CustomActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener {
 
 	ConnectionAPI connectionAPI;
 	List <PaymentRow> payments;
 	ListView lv_payment_by_provider;
-	String user;
-	String password;	
 	String provider;
 	PaymentArrayAdapter adapter;
 	int idToDelete = 0;

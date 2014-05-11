@@ -42,7 +42,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.os.Build;
 
-public class PaymentsExpensesByDayActivity extends ActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener{
+public class PaymentsExpensesByDayActivity extends CustomActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener{
 
 
 
@@ -50,8 +50,7 @@ public class PaymentsExpensesByDayActivity extends ActionBarActivity implements 
 	List <ExpenseRow> expenses;
 	ListView lv_payments_by_day;
 	ListView lv_expenses_by_day;
-	String user;
-	String password;
+
 	String date;
 	boolean user_leave;
 	PaymentArrayAdapter adapterPayment;

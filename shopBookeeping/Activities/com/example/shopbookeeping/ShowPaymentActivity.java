@@ -36,15 +36,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.os.Build;
 
-public class ShowPaymentActivity extends Activity implements
+public class ShowPaymentActivity extends CustomActionBarActivity implements
 	AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,
 	OnClickListener,OnItemSelectedListener {
 
 	ConnectionAPI connectionAPI;
-	PaymentRow payment;
-
-	String user;
-	String password;	
+	PaymentRow payment;	
 	EditText et_id;
 	EditText et_date;
 	Spinner s_providers;

@@ -34,14 +34,12 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.os.Build;
 
-public class ActivePaymentsActivity extends ActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener{
+public class ActivePaymentsActivity extends CustomActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener{
 
 
 //	ConnectionAPI connectionAPI;
 	List <PaymentRow> payments;
-	ListView lv_payments_by_activity;
-	String user;
-	String password;	
+	ListView lv_payments_by_activity;	
 	TextView tv_amount_message;
 	int idToDelete = 0;
 	double total_amount;
@@ -175,5 +173,12 @@ public class ActivePaymentsActivity extends ActionBarActivity implements AsyncTa
 		return currencyFormat.format(Double.valueOf(a));
 
 		//return String.format("%1$,.2f", Double.valueOf(a));		
+	}
+	
+	@Override
+	public void onBackPressed() {
+		 Intent next_screen = new Intent(this,MainActivity.class);
+         next_screen.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+         this.startActivity(next_screen);	
 	}
 }

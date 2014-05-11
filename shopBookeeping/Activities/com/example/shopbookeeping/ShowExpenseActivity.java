@@ -32,12 +32,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.os.Build;
 
-public class ShowExpenseActivity extends Activity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener,OnItemSelectedListener {
+public class ShowExpenseActivity extends CustomActionBarActivity implements AsyncTaskCompleteListener<ActionConnection>, OnItemClickListener,OnClickListener,OnItemSelectedListener {
 	ConnectionAPI connectionAPI;
 	ExpenseRow expense;
-
-	String user;
-	String password;	
 	EditText et_id;
 	EditText et_date;
 	Spinner s_name_expense;
